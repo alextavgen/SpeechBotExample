@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Speech Recognition</title>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+
+    <script src="script/audiodisplay.js?version=1"></script>
+    <script src="script/recorder.js?version=13"></script>
+    <script src="script/main.js?version=18"></script>
+    <link rel="stylesheet" href="style/styles.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+<div class="container">
+
+    <div class="starter-template">
+    <div class ="page-header">
+        <p>
+        <img data-src="holder.js/100x100" class="img-thumbnail" alt="100x100" style="width: 100px; height: 100px;" src="img/bun_ninja.png" data-holder-rendered="true">
+        <h2><span class="label label-default">Speech recognition Example</span></h2>
+
+        Click microfon for starting recording speech, click one more time to finish.
+        </p>
+    </div>
+    <select id="ch_language" >
+        <option value="select"></option>
+    </select>
+    <div class ="page-header">
+    <h3>Recognition Result</h3>
+    </div>
+        <p id="result"></p>
+    </div>
+
+</div>
+<div id="viz">
+    <canvas id="analyser" width="1024" height="500"></canvas>
+    <canvas id="wavedisplay" width="1024" height="500"></canvas>
+</div>
+<div id="controls">
+    <img id="record" src="img/mic128.png" onclick="toggleRecording(this);">
+</div>
+</body>
+</html>
